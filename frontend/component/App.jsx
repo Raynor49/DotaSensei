@@ -2,9 +2,9 @@ import React from 'react';
 import {Route, Link, Switch} from 'react-router-dom';
 
 const App = () => {
-  <div>
+  return(<div>
     <h1>DOTA SENSAI</h1>
-  </div>
+  </div>)
 }
 
 export default App;
