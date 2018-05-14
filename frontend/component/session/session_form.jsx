@@ -13,7 +13,19 @@ class SessionForm extends React.Component{
 
   render() {
     return(
-      <div>This is the session page</div>
+      <div>
+        <form>
+          <label>Username
+            <input type='text' value={this.state.username}/>
+          </label>
+
+          <label>Password
+            <input type='password' value={this.state.password}/>
+          </label>
+
+          <input type='submit' value={this.props.formType}/>
+        </form>
+      </div>
     )
   }
 }
