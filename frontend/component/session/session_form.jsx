@@ -11,16 +11,26 @@ class SessionForm extends React.Component{
     }
   }
 
+  handleSubmit(e) {
+    this.props.processForm(this.state)
+  }
+
+  changeState(field) {
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    }
+  }
+
   render() {
     return(
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>Username
-            <input type='text' value={this.state.username}/>
+            <input onChange={this.changeState('username')} type='text' value={this.state.username}/>
           </label>
 
           <label>Password
-            <input type='password' value={this.state.password}/>
+            <input onChange={this.changeState('password')} type='password' value={this.state.password}/>
           </label>
 
           <input type='submit' value={this.props.formType}/>
