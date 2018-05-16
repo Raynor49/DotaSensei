@@ -25,6 +25,7 @@ class SessionForm extends React.Component{
   render() {
     return(
       <div>
+        {this.props.formType}
         <form onSubmit={this.handleSubmit}>
           <label>Username
             <input onChange={this.changeState('username')} type='text' value={this.state.username}/>
