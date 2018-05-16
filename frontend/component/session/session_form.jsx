@@ -14,6 +14,7 @@ class SessionForm extends React.Component{
 
   handleSubmit(e) {
     this.props.processForm(this.state)
+    
   }
 
   changeState(field) {
